@@ -1,4 +1,2 @@
-random
-time
 selenium
 discord
