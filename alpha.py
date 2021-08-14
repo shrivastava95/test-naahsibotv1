@@ -1,3 +1,4 @@
+import os
 # bot.py
 import random
 import time
@@ -33,7 +34,7 @@ fileprefix = 'C:/Users/shriv/OneDrive/Desktop/naahsibot2/'
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
 
-TOKEN = 'ODUyODE5ODc3MTA1NjMxMjUz.YMMYZw.xDISJ0luZYwbYho9TXqv7pgizn0'
+TOKEN = os.environ.get('TOKEN')
 
 nitro_isfucked = {}
 
