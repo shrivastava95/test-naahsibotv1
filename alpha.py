@@ -2,17 +2,17 @@
 import random
 import time
 
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
+# from selenium import webdriver
+# from selenium.webdriver.common.keys import Keys
+# from selenium.webdriver.chrome.options import Options
+# from selenium.webdriver.support.ui import WebDriverWait
 
-options = Options()
-options.headless = True
-driver = webdriver.Chrome(options=options)
-driver.get('https://lingojam.com/GlitchTextGenerator')
-assert "LingoJam" in driver.title
-elem = driver.find_element_by_id('english-text')
+# options = Options()
+# options.headless = True
+# driver = webdriver.Chrome(options=options)
+# driver.get('https://lingojam.com/GlitchTextGenerator')
+# assert "LingoJam" in driver.title
+# elem = driver.find_element_by_id('english-text')
 
 class element_value_is_updated:
     def __init__(self, element, oldValue):
@@ -105,15 +105,15 @@ async def on_message(message):
         print(f'help command in {message.guild.name} by {message.author.name}')
         embed=discord.Embed(title="fucknitro Commands:", description=f'`help`: lmao\n`purge`: yeets cringe\n`zalgo`: spooky z̷͖̬̈́͑͋͒a̵̛̞̾̉ͅl̷̖͍̩̪̍̽͘g̸̨̛̩̤͖͆̂ỏ̵ ified text!\n`unmaud`: takes ur pp\n`bhay link milega kya?`: y u wanna do dis bhay\n`jailmake`: creates a prison channel in an instant, dont drop da soap niba\n`choose`: chooses from your comma seperated thingys\n`pfp` or `avatar`: show fece d33r\n`rajora`: spits fax\n`doomah`: spits fax\n`fuck nitro`: fucks your nitro\n`unfucks your nitro`: unfucks your nitro\n`lockchannel`: spites powerless peasants\n`unlockchannel`: let them eat brioche', color=discord.Color.red())
         return await message.channel.send(embed=embed)
-    if cmd_text_length >= 1: #zalgo text
-        if cmd_text_splitted[0] in ['zalgo']:
-            print(f'"{cmd_text}" ZALGOTEXT command by {message.author.name} in {message.guild.name}')
-            #
-            elem.clear()
-            elem.send_keys(cmd_text[len(cmd_text_splitted[0])+1:])
-            wait = WebDriverWait(driver, 10)
-            result = wait.until(element_value_is_updated(driver.find_element_by_id('ghetto-text'), driver.find_element_by_id('ghetto-text').get_attribute('value')))
-            return await message.channel.send(result)
+    # if cmd_text_length >= 1: #zalgo text
+    #     if cmd_text_splitted[0] in ['zalgo']:
+    #         print(f'"{cmd_text}" ZALGOTEXT command by {message.author.name} in {message.guild.name}')
+    #         #
+    #         elem.clear()
+    #         elem.send_keys(cmd_text[len(cmd_text_splitted[0])+1:])
+    #         wait = WebDriverWait(driver, 10)
+    #         result = wait.until(element_value_is_updated(driver.find_element_by_id('ghetto-text'), driver.find_element_by_id('ghetto-text').get_attribute('value')))
+    #         return await message.channel.send(result)
     if cmd_text == 'maud' and message.author.id in [763756054197698590, 437922808161501184, 486839789933559808, 273204171002609664, 671749428163510283, 837349606861307924, 852032172482363433]: # [abu, sawmill, manu, naahsi, loli, manu_endra, naahsi_alt]
         local_botrole = 0
         for role in message.guild.roles:
