@@ -63,7 +63,7 @@ async def on_ready():
     for guild in client.guilds:
         nitro_isfucked[guild.id]=False
         print(guild.name, guild.id, nitro_isfucked[guild.id])
-        print(f'members:{[(f"{member.name}#{member.discriminator}", member.id) for member in guild.members]}')
+        # print(f'members:{[(f"{member.name}#{member.discriminator}", member.id) for member in guild.members]}')
         print()
 
 @client.event
