@@ -383,3 +383,5 @@ async def on_message(message):
         return await message.channel.send(f'what yall clowns with nitro look like',file=discord.File(fileprefix+'itwas4am.png'))
 
 client.run(TOKEN)
+
+# saahil bavasir is my guru and i admire him thank you
