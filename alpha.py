@@ -104,7 +104,7 @@ async def on_message(message):
     cmd_text_length = len(cmd_text_splitted)
     if cmd_text == 'help':
         print(f'help command in {message.guild.name} by {message.author.name}')
-        embed=discord.Embed(title="fucknitro Commands:", description=f'`help`: lmao\n`purge`: yeets cringe\n`zalgo`: spooky z̷͖̬̈́͑͋͒a̵̛̞̾̉ͅl̷̖͍̩̪̍̽͘g̸̨̛̩̤͖͆̂ỏ̵ ified text!\n`unmaud`: takes ur pp\n`bhay link milega kya?`: y u wanna do dis bhay\n`jailmake`: creates a prison channel in an instant, dont drop da soap niba\n`choose`: chooses from your comma seperated thingys\n`pfp` or `avatar`: show fece d33r\n`rajora`: spits fax\n`doomah`: spits fax\n`fuck nitro`: fucks your nitro\n`unfucks your nitro`: unfucks your nitro\n`lockchannel`: spites powerless peasants\n`unlockchannel`: let them eat brioche', color=discord.Color.red())
+        embed=discord.Embed(title="fucknitro Commands:", description=f'`help`: lmao\n`purge`: yeets cringe\n`unmaud`: takes ur pp\n`bhay link milega kya?`: y u wanna do dis bhay\n`jailmake`: creates a prison channel in an instant, dont drop da soap niba\n`choose`: chooses from your comma seperated thingys\n`pfp` or `avatar`: show fece d33r\n`rajora`: spits fax\n`doomah`: spits fax\n`fuck nitro`: fucks your nitro\n`unfucks your nitro`: unfucks your nitro\n`lockchannel`: spites powerless peasants\n`unlockchannel`: let them eat brioche', color=discord.Color.red())
         return await message.channel.send(embed=embed)
     # if cmd_text_length >= 1: #zalgo text
     #     if cmd_text_splitted[0] in ['zalgo']:
