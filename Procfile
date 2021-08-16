@@ -1,1 +1,1 @@
-worker: gunicorn alpha.py
+web: python alpha.py
