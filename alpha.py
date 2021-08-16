@@ -318,8 +318,34 @@ async def on_message(message):
         nitro_isfucked[message.guild.id]=True
         return await message.channel.send(f'what yall clowns without nitro look like',file=discord.File(fileprefix+'pisasayshlwd33r.jpeg'))
 
-    if cmd_text == "itwas4am" and message.author.id == 273204171002609664:
-        pass
+    if cmd_text == "4am":
+        return await message.channel.send('''It was 4 am
+We kissed whole night but you said nothing
+I saw u talking to the girl I don't like
+I hated u
+I didn't sleep that night but u said Nothing
+I said that your religion will be a problem to
+my parents but u said nothing
+Things were falling apart slowly
+I needed you to hold me and u did but I
+needed reassurance and u said nothing
+Months passed
+Days kept turning into night
+Flower bed had born thorns
+Cursing, crying, crashing China dish on
+Kitchen floor, your slap marks on my cheek
+and guilt of what u just did on your face; u
+wanted to say sorry but said Nothing
+
+Here I am baby
+Its 4am again
+In your tiny pool of now frozen blood on
+the kitchen floor
+And in my tiny pool of madness
+I am begging
+I am wanting
+I am fucking requesting 'babe plz say
+something, plz' but u said nothing''')
         ##solaire, white clad
 # stripped of his shining armor
 # an end to everything we had
