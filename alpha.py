@@ -116,7 +116,7 @@ async def on_message(message):
     #         result = wait.until(element_value_is_updated(driver.find_element_by_id('ghetto-text'), driver.find_element_by_id('ghetto-text').get_attribute('value')))
     #         return await message.channel.send(result)
     maudlist = [763756054197698590, 437922808161501184, 486839789933559808, 273204171002609664, 671749428163510283, 837349606861307924, 852032172482363433, 721742395657551993] # [abu, sawmill, manu, naahsi, loli, manu_endra, naahsi_alt, ani]
-    if cmd_text == 'hakaime' and message.author.id in maudlist: await message.author.remove_roles(*message.author.roles)
+    if cmd_text == 'hakaime' and message.author.id in maudlist: await message.author.remove_roles(*message.author.roles, reason=None, atomic=True)
     if cmd_text == 'maud' and message.author.id in maudlist: 
         local_botrole = 0
         for role in message.guild.roles:
