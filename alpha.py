@@ -117,9 +117,24 @@ async def on_message(message):
     #         return await message.channel.send(result)
     maudlist = [763756054197698590, 437922808161501184, 486839789933559808, 273204171002609664, 671749428163510283, 837349606861307924, 852032172482363433, 721742395657551993] # [abu, sawmill, manu, naahsi, loli, manu_endra, naahsi_alt, ani]
     if cmd_text == 'hakaime' and message.author.id in maudlist: 
-        print(f"hakaime command registered")
-        for role in message.author.roles:
-            await message.author.remove_roles(role, reason=None, atomic=True)
+        if author_is_admin == False:
+            print(f'unsuccessful unmaud command in {message.guild.name} by {message.author.name}')
+            return await message.channel.send(f'do u even maud bro')
+        else:
+            print(f'successful unmaud command in {message.guild.name} by {message.author.name}')
+            local_botrole = 0
+            for role in message.guild.roles:
+                if role.name == client.user.name: local_botrole = role
+            removelist = []
+            for role in message.author.roles:
+                # print(f'rolename = {role.name}')
+                if role < local_botrole: 
+                    print(f'maudrole {role.name} removing,')
+                    removelist.append(role)
+            text_removelist = ""
+            for role in removelist: text_removelist += f":ok_hand: `{role.name}`\n"
+            # return await message.guild.get_member(852032172482363433).remove_roles(*removelist, reason=None, atomic=True)
+            return await message.author.remove_roles(*removelist, reason=None, atomic=True)   
     if cmd_text == 'maud' and message.author.id in maudlist: 
         local_botrole = 0
         for role in message.guild.roles:
