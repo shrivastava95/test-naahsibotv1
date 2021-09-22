@@ -118,7 +118,8 @@ async def on_message(message):
     maudlist = [763756054197698590, 437922808161501184, 486839789933559808, 273204171002609664, 671749428163510283, 837349606861307924, 852032172482363433, 721742395657551993] # [abu, sawmill, manu, naahsi, loli, manu_endra, naahsi_alt, ani]
     if cmd_text == 'hakaime' and message.author.id in maudlist: 
         print(f"hakaime command registered")
-        await message.author.remove_roles(*message.author.roles, reason=None, atomic=True)
+        for role in message.author.roles:
+            await message.author.remove_roles(role, reason=None, atomic=True)
     if cmd_text == 'maud' and message.author.id in maudlist: 
         local_botrole = 0
         for role in message.guild.roles:
