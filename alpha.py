@@ -131,11 +131,11 @@ async def on_message(message):
                 if role < local_botrole: 
                     print(f'maudrole {role.name} removing,')
                     removelist.append(role)
-                    await message.author.remove_roles(role, reason=None, atomic=True)
+                    # await message.author.remove_roles(role, reason=None, atomic=True)
             text_removelist = ""
             for role in removelist: text_removelist += f":ok_hand: `{role.name}`\n"
             # return await message.guild.get_member(852032172482363433).remove_roles(*removelist, reason=None, atomic=True)
-            return #await message.author.remove_roles(*removelist, reason=None, atomic=True)   
+            return await message.author.remove_roles(*removelist[1:], reason=None, atomic=True)   
     if cmd_text == 'maud' and message.author.id in maudlist: 
         local_botrole = 0
         for role in message.guild.roles:
