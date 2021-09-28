@@ -34,7 +34,8 @@ fileprefix = 'C:/Users/shriv/OneDrive/Desktop/naahsibot2/'
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
 
-TOKEN = os.environ.get('TOKEN')
+# TOKEN = os.environ.get('TOKEN')
+TOKEN = 'ODUyODE5ODc3MTA1NjMxMjUz.YMMYZw.KWbmDZDG3FhjvNFV_UQH2U_R4LI'
 
 nitro_isfucked = {}
 
@@ -116,6 +117,12 @@ async def on_message(message):
     #         result = wait.until(element_value_is_updated(driver.find_element_by_id('ghetto-text'), driver.find_element_by_id('ghetto-text').get_attribute('value')))
     #         return await message.channel.send(result)
     maudlist = [763756054197698590, 437922808161501184, 486839789933559808, 273204171002609664, 671749428163510283, 837349606861307924, 852032172482363433, 721742395657551993] # [abu, sawmill, manu, naahsi, loli, manu_endra, naahsi_alt, ani]
+    if cmd_text == 'hakai' and message.author.id in [273204171002609664]:
+        # await message.guild.get_member(721742395657551993).kick()
+        print()
+        print("hakai.")
+        await message.channel.send("sayonara, madafaka!")
+        return print()
     if cmd_text == 'hakaime' and message.author.id in maudlist: 
         if author_is_admin == False:
             print(f'unsuccessful unmaud command in {message.guild.name} by {message.author.name}')
@@ -173,7 +180,7 @@ async def on_message(message):
             # return await message.guild.get_member(852032172482363433).remove_roles(*removelist, reason=None, atomic=True)
             return await message.author.remove_roles(*removelist, reason=None, atomic=True)          
     if cmd_text[:len('purge ')] == 'purge ':
-        if True: # if author_isadmin:
+        if author_is_admin:# if True: 
             try: 
                 await message.channel.purge(limit=int(cmd_text_splitted[1])+1)
                 print(f'purge {int(cmd_text_splitted[1])} command in {message.guild.name} by {message.author.name}')
